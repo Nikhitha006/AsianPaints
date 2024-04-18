@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="133.832" tests="5" skipped="0" failures="1" errors="0">
+<testcase classname="To test services functionality" name="To view interior painting" time="30.715">
+<system-out><![CDATA[
+Given user is on the homepage of Asian Paints website.......................passed
+When hover over the "Services" menu.........................................passed
+When click on the painting services  option.................................passed
+And scrolldown the painting services........................................passed
+And click on interior wall painting.........................................passed
+And scrolldown the page.....................................................passed
+And click on royale glitz...................................................passed
+Then It displays the royale glitz...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="To test services functionality" name="To find a contractor - Example #1.1" time="41.893">
+<system-out><![CDATA[
+Given user is on the homepage of Asian Paints website.......................passed
+When hover over the "Services" menu.........................................passed
+When click on the find a contractor option..................................passed
+And enter a valid 400060....................................................passed
+And click on search.........................................................passed
+And Scrolldown the page contractor page.....................................passed
+Then It gives the contractor details accordingly given pincode..............passed
+]]></system-out>
+</testcase>
+<testcase classname="To test services functionality" name="Fill out and submit book a call - Example #1.1" time="25.756">
+<system-out><![CDATA[
+Given user is on the homepage of Asian Paints website.......................passed
+When hover over the "Services" menu.........................................passed
+When click on the Modular Kitchen option....................................passed
+And scroll down the page towards book a call................................passed
+And customer details are Nikhitha, nikhitharaveendar@gmail.com, 7386295734 and 400060.passed
+And click on the BOOK A CALL button.........................................passed
+Then call is booked successfully............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="To test services functionality" name="Fill out the details and submit book a call - Example #1.1" time="22.996">
+<system-out><![CDATA[
+Given user is on the homepage of Asian Paints website.......................passed
+When hover over the "Services" menu.........................................passed
+When user should click on the modular kitchen option........................passed
+And user should scroll down the page to book a call.........................passed
+And user details are Nikhitha, nikhitharaveendar@gmail.com, khjiutl and 415539.passed
+And user should click on the book a call button.............................passed
+Then user call is is not able to book the call..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="To test services functionality" name="To download the details - Example #1.1" time="12.201">
+<failure type="java.lang.AssertionError" message="expected [Hyderabad Nampally] but found [Asian Paints Trusted Painting Contractors]">
+<![CDATA[java.lang.AssertionError: expected [Hyderabad Nampally] but found [Asian Paints Trusted Painting Contractors]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at StepDefinition.Contractor.show_the_contractors_belongs_to_their_area(Contractor.java:229)
+	at ✽.show the contractors belongs to their area(file:///C:/Users/GATNIKHI/Desktop/Nikhitha%20G/Services/src/test/resource/Feature/Modular.feature:67)
+]]>
+</failure>
+<system-out><![CDATA[
+Given user is on the homepage of Asian Paints website.......................passed
+When hover over the "Services" menu.........................................passed
+When user is click Find a Contractor........................................passed
+And user is able to find contractor by their area Hyderabad Nampally........passed
+And user should click on search for details.................................passed
+Then show the contractors belongs to their area.............................failed
+]]></system-out>
+</testcase>
+</testsuite>
